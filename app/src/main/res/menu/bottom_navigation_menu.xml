@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Home"
+        android:id="@+id/home"
+        android:icon="@drawable/ic_outline_home_24"/>
+    <item android:title="Students"
+        android:id="@+id/students"
+        android:icon="@drawable/ic_outline_group_24"/>
+    <item android:title="Teams"
+        android:id="@+id/teams"
+        android:icon="@drawable/ic_outline_calendar_today_24"/>
+    <item android:title="Inbox"
+        android:id="@+id/inbox"
+        android:icon="@drawable/ic_outline_chat_24"/>
+</menu>
