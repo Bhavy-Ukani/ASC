@@ -8,6 +8,7 @@ They can do lot's of things like
 - Private Chat
 - Fourm
 - Study document
+- Projects & assignments
 - Announce new events or many more
 
 ### Thank you
