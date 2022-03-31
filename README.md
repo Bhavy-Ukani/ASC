@@ -1,7 +1,7 @@
 
 # ASC Atmiya Student Community
 
-An android App. Where student's of Atmiya connect togather at same platefrom
+An android App. Where student's of Atmiya connect together at same platefrom
 They can do lot's of things like 
 - Question Answers.
 - Create Groups
