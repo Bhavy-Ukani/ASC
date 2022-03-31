@@ -113,7 +113,7 @@ public class AuthActivity extends AppCompatActivity {
 
     private void userData(){
         FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
-        useRef = userInfo.getReference("user/"+ firebaseUser.getUid());
+        useRef = userInfo.getReference("user/profile"+ firebaseUser.getUid());
         HashMap<String,String> map = new HashMap<>();
         map.put("name", firebaseUser.getDisplayName());
         if(firebaseUser.getPhotoUrl() != null) {
@@ -125,7 +125,6 @@ public class AuthActivity extends AppCompatActivity {
         map.put("type", "1");
         map.put("mobile",firebaseUser.getPhoneNumber());
         useRef.setValue(map.toString());
-
     }
 
 }
