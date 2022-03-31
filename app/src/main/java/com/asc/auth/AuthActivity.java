@@ -116,7 +116,11 @@ public class AuthActivity extends AppCompatActivity {
         useRef = userInfo.getReference("user/"+ firebaseUser.getUid());
         HashMap<String,String> map = new HashMap<>();
         map.put("name", firebaseUser.getDisplayName());
-        map.put("avtar",firebaseUser.getPhotoUrl().toString());
+        if(firebaseUser.getPhotoUrl() != null) {
+            map.put("avtar", firebaseUser.getPhotoUrl().toString());
+        } else {
+            map.put("avtar","false");
+        }
         map.put("mail", firebaseUser.getEmail());
         map.put("type", "1");
         map.put("mobile",firebaseUser.getPhoneNumber());
