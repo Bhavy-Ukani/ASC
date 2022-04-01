@@ -80,7 +80,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="user_batch"/>
-        <Button
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/signoutbtn"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"

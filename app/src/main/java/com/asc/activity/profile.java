@@ -11,6 +11,8 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.asc.R;
 import com.bumptech.glide.Glide;
+import com.firebase.ui.auth.AuthUI;
+import com.google.android.material.button.MaterialButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -20,6 +22,8 @@ public class profile extends AppCompatActivity {
 
     private TextView flname, email, userid, batch;
     private ImageView avtar;
+    private MaterialButton signoutbtn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +36,11 @@ public class profile extends AppCompatActivity {
 
     private void initLogic() {
         loadData();
+        signoutbtn.setOnClickListener(view -> {
+            AuthUI.getInstance()
+                    .signOut(this)
+                    .addOnCompleteListener(task -> finish());
+        });
     }
     // TODO: load all ui from here
     private void loadui() {
@@ -40,6 +49,7 @@ public class profile extends AppCompatActivity {
         email = findViewById(R.id.user_email);
         userid = findViewById(R.id.user_id);
         batch = findViewById(R.id.user_batch);
+        signoutbtn = findViewById(R.id.signoutbtn);
     }
 
     // TODO: Load all user details here from firebase

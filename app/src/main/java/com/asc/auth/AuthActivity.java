@@ -51,21 +51,20 @@ public class AuthActivity extends AppCompatActivity {
     }
 
     private void loadui() {
-        Objects.requireNonNull(getSupportActionBar()).hide();
         emailbtn = findViewById(R.id.emilbtn);
         ggl = findViewById(R.id.ggl);
     }
 
 
     private void logic() {
-        //Email login init
+        //TODO: Email login init
         emailbtn.setOnClickListener(view -> {
             provider = Collections.singletonList(
                     new AuthUI.IdpConfig.EmailBuilder().build()
             );
             handleLoginregister();
         });
-        // Google Login init
+        // TODO: Google Login init
         ggl.setOnClickListener(view -> {
             provider = Collections.singletonList(
                     new AuthUI.IdpConfig.GoogleBuilder().build()
@@ -94,7 +93,7 @@ public class AuthActivity extends AppCompatActivity {
 
     private void onSignInResult(FirebaseAuthUIAuthenticationResult result) {
         if (result.getResultCode() == RESULT_OK) {
-            // Successfully signed in
+            // TODO: when successfully signed in
             Log.d("A", result.toString());
             Intent i = new Intent();
             i.setClass(getApplicationContext(),MainActivity.class);
@@ -112,9 +111,10 @@ public class AuthActivity extends AppCompatActivity {
     }
 
     private void userData(){
+//        Todo: uploading user data to firebase
         FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
-        useRef = userInfo.getReference("user/profile"+ firebaseUser.getUid());
-        HashMap<String,String> map = new HashMap<>();
+        useRef = userInfo.getReference("user/profile");
+        HashMap<String,Object> map = new HashMap<>();
         map.put("name", firebaseUser.getDisplayName());
         if(firebaseUser.getPhotoUrl() != null) {
             map.put("avtar", firebaseUser.getPhotoUrl().toString());
@@ -124,7 +124,7 @@ public class AuthActivity extends AppCompatActivity {
         map.put("mail", firebaseUser.getEmail());
         map.put("type", "1");
         map.put("mobile",firebaseUser.getPhoneNumber());
-        useRef.setValue(map.toString());
+        useRef.child(firebaseUser.getUid()).updateChildren(map);
     }
 
 }
