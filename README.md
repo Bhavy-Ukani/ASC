@@ -6,8 +6,8 @@ They can do lot's of things like
 - [ ] Question Answers.
 - [ ] Create Groups
 - [ ] Private Chat
-- [x] Forum
-- [x] Study document
+- [ ] Forum
+- [ ] Study document
 - [ ] Projects & assignments
 - [ ] Announce new events or many more
 ### Statics
