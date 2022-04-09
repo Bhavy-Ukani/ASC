@@ -19,8 +19,6 @@ import com.asc.R;
 import com.firebase.ui.auth.AuthUI;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-import java.util.Objects;
-
 public class Base extends AppCompatActivity {
 
     private BottomNavigationView navigation;
@@ -50,7 +48,7 @@ public class Base extends AppCompatActivity {
         //TODO: Logout
         img_profile.setOnClickListener(view -> {
             Intent i = new Intent();
-            i.setClass(getApplicationContext(),profile.class);
+            i.setClass(getApplicationContext(), Profile.class);
             i.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
             startActivity(i);
         });
@@ -98,14 +96,6 @@ public class Base extends AppCompatActivity {
     }
     @Override
     protected void onRestoreInstanceState(Bundle bundle){
-        Fragment ff = fragmentContainerView.getFragment();
-        fragmentContainerView.removeAllViewsInLayout();
-        fragmentManager.beginTransaction()
-                .remove(active).commit();
-        fragmentManager.beginTransaction()
-                .add(active,active.getTag())
-                .show(active).commit();
-
         super.onRestoreInstanceState(bundle);
     }
 

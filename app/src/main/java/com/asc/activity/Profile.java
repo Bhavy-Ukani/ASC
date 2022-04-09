@@ -16,7 +16,7 @@ import com.google.android.material.button.MaterialButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class profile extends AppCompatActivity {
+public class Profile extends AppCompatActivity {
 
     private Toolbar toolbar;
 

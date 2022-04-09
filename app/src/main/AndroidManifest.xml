@@ -15,7 +15,7 @@
             android:name=".activity.Documents"
             android:exported="false" />
         <activity
-            android:name=".activity.profile"
+            android:name=".activity.Profile"
             android:exported="false" />
         <activity
             android:name=".activity.Base"
@@ -24,9 +24,6 @@
             android:name=".auth.AuthActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".activity.home"
-            android:exported="false" />
         <activity
             android:name=".activity.MainActivity"
             android:exported="true">
