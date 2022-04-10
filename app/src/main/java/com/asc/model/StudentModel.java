@@ -1,28 +1,31 @@
 package com.asc.model;
 
 public class StudentModel {
-    private String name,email,batch,avatar;
+    private String avtar,mail,name,type;
 
-    public StudentModel(String name, String email, String batch, String avatar) {
+    public StudentModel() {
+    }
+
+    public StudentModel(String avtar, String mail, String name, String type) {
+        this.avtar = avtar;
+        this.mail = mail;
         this.name = name;
-        this.email = email;
-        this.batch = batch;
-        this.avatar = avatar;
+        this.type = type;
+    }
+
+    public String getAvtar() {
+        return avtar;
+    }
+
+    public String getMail() {
+        return mail;
     }
 
     public String getName() {
         return name;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public String getBatch() {
-        return batch;
-    }
-
-    public String getAvatar() {
-        return avatar;
+    public String getType() {
+        return type;
     }
 }
