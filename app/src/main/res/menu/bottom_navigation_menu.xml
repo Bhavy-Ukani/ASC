@@ -14,4 +14,7 @@
     <item android:title="Inbox"
         android:id="@+id/inbox"
         android:icon="@drawable/ic_outline_chat_24"/>
+    <item android:title="Profile"
+        android:id="@+id/profile"
+        android:icon="@drawable/ic_outline_person_24"/>
 </menu>

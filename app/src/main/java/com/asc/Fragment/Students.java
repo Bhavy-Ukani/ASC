@@ -26,12 +26,9 @@ import com.google.firebase.database.Query;
 import java.util.ArrayList;
 
 public class Students extends Fragment {
-    FirebaseDatabase myDb = FirebaseDatabase.getInstance();
-    DatabaseReference myRef = myDb.getReference("user/profile");
-
-    ArrayList<StudentModel> list;
-    private RecyclerView recview;
-    StudentAdapter studentAdapter;
+    private final FirebaseDatabase myDb = FirebaseDatabase.getInstance();
+    private final DatabaseReference myRef = myDb.getReference("user/profile");
+    private ArrayList<StudentModel> list;
 
     public Students() {
     }
@@ -45,7 +42,7 @@ public class Students extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_students,container,false);
-        recview = (RecyclerView) view.findViewById(R.id.studentsList);
+        RecyclerView recview = (RecyclerView) view.findViewById(R.id.studentsList);
         recview.setLayoutManager(new LinearLayoutManager(getActivity()));
         Query query = FirebaseDatabase.getInstance()
                 .getReference()
@@ -55,9 +52,7 @@ public class Students extends Fragment {
                 new FirebaseRecyclerOptions.Builder<StudentModel>()
                         .setQuery(query, StudentModel.class)
                         .build();
-
-        studentAdapter =new StudentAdapter(options);
-        System.out.println();
+        StudentAdapter studentAdapter = new StudentAdapter(options);
         recview.setAdapter(studentAdapter);
         studentAdapter.startListening();
         return view;

@@ -23,6 +23,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Objects;
 
 public class AuthActivity extends AppCompatActivity {
@@ -98,7 +99,7 @@ public class AuthActivity extends AppCompatActivity {
             Intent i = new Intent();
             i.setClass(getApplicationContext(),MainActivity.class);
             startActivity(i);
-            if(Objects.requireNonNull(result.getIdpResponse()).isNewUser()) {
+            if(result.getIdpResponse().isNewUser()) {
                 userData();
             } else {
                 finish();

@@ -26,8 +26,16 @@ public class StudentAdapter extends FirebaseRecyclerAdapter<StudentModel,Student
 
     @Override
     protected void onBindViewHolder(@NonNull StudentAdapter.myviewholder holder, int position, @NonNull StudentModel model) {
-        holder.name.setText(model.getName());
-        Glide.with(holder.avtar).load(Uri.parse(model.getAvtar())).into(holder.avtar);
+        holder.firstname.setText(model.getName());
+        Glide.with(holder.avatar)
+                .load(Uri.parse(model.getAvtar()))
+                .circleCrop()
+                .into(holder.avatar);
+        try {
+            holder.username.setText(model.getUsername());
+        } catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     @NonNull
@@ -37,13 +45,14 @@ public class StudentAdapter extends FirebaseRecyclerAdapter<StudentModel,Student
         return new myviewholder(view);
     }
 
-    public class myviewholder extends RecyclerView.ViewHolder {
-        TextView name;
-        ImageView avtar;
+    public static class myviewholder extends RecyclerView.ViewHolder {
+        TextView firstname, username;
+        ImageView avatar;
         public myviewholder(@NonNull View itemView) {
             super(itemView);
-            name = (TextView) itemView.findViewById(R.id.user_flname);
-            avtar = itemView.findViewById(R.id.avtar);
+            firstname = itemView.findViewById(R.id.user_flname);
+            username = itemView.findViewById(R.id.username);
+            avatar = itemView.findViewById(R.id.avtar);
         }
     }
 }
