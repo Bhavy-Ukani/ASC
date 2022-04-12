@@ -1,6 +1,7 @@
 package com.asc;
 
 import android.app.Application;
+import android.content.pm.ActivityInfo;
 
 import androidx.appcompat.app.AppCompatDelegate;
 

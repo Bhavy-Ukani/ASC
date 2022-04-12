@@ -95,4 +95,14 @@ public class Base extends AppCompatActivity {
         navigation.getMenu().getItem(position).setChecked(true);
         active = fragment;
     }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        Intent i = new Intent();
+        i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        i.setClass(getApplicationContext(),Base.class);
+        finish();
+        startActivity(i);
+        super.onRestoreInstanceState(savedInstanceState);
+    }
 }

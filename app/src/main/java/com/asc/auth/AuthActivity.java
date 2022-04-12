@@ -23,8 +23,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Locale;
-import java.util.Objects;
 
 public class AuthActivity extends AppCompatActivity {
 
@@ -77,9 +75,9 @@ public class AuthActivity extends AppCompatActivity {
     private void handleLoginregister() {
         Intent intent = AuthUI.getInstance()
                 .createSignInIntentBuilder()
+                .setIsSmartLockEnabled(true,true)
                 .setAvailableProviders(provider)
                 .setAlwaysShowSignInMethodScreen(false)
-                .setIsSmartLockEnabled(false)
                 .setTosAndPrivacyPolicyUrls("https:google.com", "https://Google.com")
                 .setLogo(R.drawable.ic_launcher_background)
                 .setTheme(R.style.Theme_MyApplication)
