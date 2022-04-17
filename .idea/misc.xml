@@ -3,17 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/gunja/AndroidStudioProjects/MyApplication2/app/src/main/res/drawable/card_like_back.xml" value="0.168" />
         <entry key="..\:/Users/gunja/AndroidStudioProjects/MyApplication2/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.124" />
         <entry key="..\:/Users/gunja/AndroidStudioProjects/MyApplication2/app/src/main/res/drawable/ic_outline_person_24.xml" value="0.168" />
         <entry key="..\:/Users/gunja/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_auth.xml" value="0.264" />
         <entry key="..\:/Users/gunja/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_base.xml" value="0.2" />
         <entry key="..\:/Users/gunja/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_documents.xml" value="0.20854700854700856" />
         <entry key="..\:/Users/gunja/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_main.xml" value="0.16799999999999998" />
+        <entry key="..\:/Users/gunja/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_new_discuss.xml" value="0.2" />
         <entry key="..\:/Users/gunja/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_profile.xml" value="0.264" />
         <entry key="..\:/Users/gunja/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/activity_profile2.xml" value="0.14017094017094017" />
         <entry key="..\:/Users/gunja/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/content_profile.xml" value="0.1" />
         <entry key="..\:/Users/gunja/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/fragment_first.xml" value="0.1" />
         <entry key="..\:/Users/gunja/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/fragment_home.xml" value="0.20854700854700856" />
+        <entry key="..\:/Users/gunja/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/fragment_profile.xml" value="0.11666666666666667" />
         <entry key="..\:/Users/gunja/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/fragment_profile_list_dialog.xml" value="0.13803418803418804" />
         <entry key="..\:/Users/gunja/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/fragment_profile_list_dialog_item.xml" value="0.13803418803418804" />
         <entry key="..\:/Users/gunja/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/fragment_second.xml" value="0.1" />
@@ -25,6 +28,7 @@
         <entry key="..\:/Users/gunja/AndroidStudioProjects/MyApplication2/app/src/main/res/layout/item_students.xml" value="0.264" />
         <entry key="..\:/Users/gunja/AndroidStudioProjects/MyApplication2/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.13547008547008546" />
         <entry key="..\:/Users/gunja/AndroidStudioProjects/MyApplication2/app/src/main/res/menu/menu_base.xml" value="0.264" />
+        <entry key="..\:/Users/gunja/AndroidStudioProjects/MyApplication2/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.152" />
       </map>
     </option>
   </component>

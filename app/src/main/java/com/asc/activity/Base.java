@@ -24,8 +24,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class Base extends AppCompatActivity {
 
     private BottomNavigationView navigation;
-
-    private ImageView notifaction;
+    private FrameLayout fragmentContainerView;
+    private ImageView notification;
 
     private final FragmentManager fragmentManager = getSupportFragmentManager();
     private final Fragment home = new Home();
@@ -38,10 +38,9 @@ public class Base extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_base);
-        FrameLayout fragmentContainerView = findViewById(R.id.fragmentContainerView);
-        notifaction = findViewById(R.id.notification);
+        fragmentContainerView = findViewById(R.id.fragmentContainerView);
+        notification = findViewById(R.id.notification);
         initial();
-        LoadBottomNav();
     }
 
     private void LoadBottomNav() {
@@ -69,7 +68,7 @@ public class Base extends AppCompatActivity {
     }
 
     private void initial() {
-        notifaction.setOnClickListener(view -> {
+        notification.setOnClickListener(view -> {
             AuthUI.getInstance().signOut(getApplicationContext()).addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
@@ -79,6 +78,7 @@ public class Base extends AppCompatActivity {
                 }
             });
         });
+        LoadBottomNav();
     }
 
     private void openFragment(Fragment fragment, String tag, int position) {
@@ -96,13 +96,13 @@ public class Base extends AppCompatActivity {
         active = fragment;
     }
 
-    @Override
-    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
-        Intent i = new Intent();
-        i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        i.setClass(getApplicationContext(),Base.class);
-        finish();
-        startActivity(i);
-        super.onRestoreInstanceState(savedInstanceState);
-    }
+//    @Override
+//    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+//        Intent i = new Intent();
+//        i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//        i.setClass(getApplicationContext(),Base.class);
+//        finish();
+//        startActivity(i);
+//        super.onRestoreInstanceState(savedInstanceState);
+//    }
 }
